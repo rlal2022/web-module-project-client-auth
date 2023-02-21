@@ -3,9 +3,10 @@ import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 
 import Login from "./components/Login";
-// import Logout from "./components/Logout";
-// import FriendsList from ".components/FriendsList";
-// import AddFriend from "./components/AddFriend";
+import Logout from "./components/Logout";
+import FriendsList from "./components/FriendsList";
+import AddFriend from "./components/AddFriend";
+import PrivateRoutes from "./components/PrivateRoutes";
 
 function App() {
   return (
@@ -20,10 +21,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/logout" />
-        <Route path="/friends" />
-        <Route path="/friends/add" />
-        <Route path="/" />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/friends" element={<FriendsList />} />
+        <Route path="/friends/add" element={<AddFriend />} />
+        <Route exact path="/" />
       </Routes>
     </div>
   );

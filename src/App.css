@@ -45,3 +45,8 @@
 .form {
   padding-top: 2em;
 }
+
+.add-form {
+  display: flex;
+  justify-content: center;
+}
